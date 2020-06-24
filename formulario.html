@@ -1,0 +1,56 @@
+
+<html>
+  <head>
+    <script>
+      function validarsenha() {
+        if(document.getElementById("name").value == ""){
+           alert ("Por favor preencha este campo");
+           document.getElementById("name").focus();
+           return false; 
+        }else if (document.getElementById("end").value == ""){
+           alert ("Por favor preencha este campo");
+           document.getElementById("end").focus();
+           return false;  
+        }else if(document.getElementById("tel").value == ""){
+           alert ("Por favor preencha este campo");
+           document.getElementById("tel").focus();
+           return false; 
+          }else if (isNaN(tel.value)){  
+               alert ("Digite apenas numeros");
+               tel.value="";
+               document.getElementById("tel").focus();
+               return false; 
+        }else if(document.getElementById("email").value == ""){
+           alert ("Por favor preencha este campo");
+           document.getElementById("email").focus(); 
+           return false; 
+        }else if(document.getElementById("senha").value == ""){
+           alert ("Por favor preencha este campo");
+           document.getElementById("senha").focus(); 
+           return false; 
+        }else if(document.getElementById("confsenha").value == "") {
+           alert ("Por favor preencha este campo");
+           document.getElementById("confsenha").focus(); 
+           return false;
+        }else if (document.getElementById("senha").value != document.getElementById("confsenha").value ) {
+              alert ("A senha não corresponde");
+              confsenha.value ="";
+              document.getElementById("confsenha").focus();
+              return false;
+           }     
+        
+        }    
+    </script>
+  </head>
+  <body>
+    <form id="form" method="post" action="#">
+      <b>Nome:</b>  <input type="text" id="name"><br><br>
+      <b>Endereço:</b> <input type="text" id="end"><br><br>
+      <b>Telefone:</b> <input type="text" id="tel"> <br><br>
+      <b>Email:</b> <input type="text" id="email"><br><br>
+      <b>Senha:</b> <input type="text" id="senha"><br><br>
+      <b>Confirmação de senha:</b> <input type="text" id="confsenha"><br><br>
+      <input type="submit" id="bt1" value="VALIDAR" OnClick="return validarsenha()">
+    </form>  
+  </body>
+</html>
